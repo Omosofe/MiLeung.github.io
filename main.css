@@ -1,0 +1,23 @@
+.background{
+    background-color:#E6F5EB;
+}
+
+h1{
+    font-family:"Helvetica";
+}
+
+.title{
+    text-align:center;
+}
+
+.titlePicText{
+    font-size:12px;
+    position:relative;
+    text-align:center;
+    left:130px;
+}
+
+.thankyous{
+    font-size:12px;
+    text-align:bottom;
+}
