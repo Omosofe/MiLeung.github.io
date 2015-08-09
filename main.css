@@ -1,23 +1,78 @@
-.background{
+body, html {
     background-color:#E6F5EB;
+    font-family: "Helvetica";
+    height: 100%;
 }
 
-h1{
-    font-family:"Helvetica";
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.title{
+a:hover {
+    background-color: #94FFFF;
+}
+
+.title {
     text-align:center;
 }
 
-.titlePicText{
+.titlePic {
+    position: absolute;
+    width: 400px;
+    margin-left: 8%;
+    float: left;
+    margin-top: -190px;
+}
+#pic {
+    border: 2px solid black;    
+    border-radius: 200px;
+    height:400px;
+}
+
+.titlePicText {
     font-size:12px;
     position:relative;
     text-align:center;
-    left:130px;
 }
 
-.thankyous{
-    font-size:12px;
-    text-align:bottom;
+#buttons {
+    width: 60px;
+    height: 160px;
+    margin-top: 170px;
 }
+
+.buttons {
+    width: 60px;
+    position: relative;
+
+}
+
+.info {
+    position: absolute;
+    padding: 0px 10px 0px 10px;
+    top: 170px;
+    left: 550px;
+    border: solid 2px;
+    margin-left: 3%;
+    margin-right: 7%;
+}
+
+.postings {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: pink;
+}
+
+.content {
+    min-height: 100%;
+    margin-bottom: 20px;
+}
+
+.footer {
+    font-size: 12px;
+    height: 20px;
+    margin-top: 0px;
+}
+
