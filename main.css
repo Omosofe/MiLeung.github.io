@@ -10,6 +10,10 @@ a {
     color: black;
 }
 
+li a {
+    border-bottom: 1px solid black;
+}
+
 li a:hover {
     background-color: #999999;
 }
