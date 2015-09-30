@@ -13,20 +13,3 @@ $(document).ready(function(){
 	});
 });
 
-//$('html, body').stop().animate({
-//     'scrollTop': $target.offset().top
-//}, 900, 'swing');
-
-/* blank postings skeleton
-
-<div id="main subject">
-            <h3>title</h3>
-            <img src="Pictures/picName.jpg" alt="text for img">
-            <div class="content">
-            <p>
-                write stuff here
-            </p>
-            </div>
-        </div>
-        
-*/
