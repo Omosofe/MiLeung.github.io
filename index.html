@@ -3,19 +3,167 @@
 
     <head>
         <link rel="stylesheet" href="main.css">
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> 
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="main.js"></script>
         <title>Michael Leung</title>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66139548-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     </head>
 
-    <body class="background" background>
-        
+    <body>
+    <div class="main">    
         <h1 class="title">Michael Leung</h1>
-        <center><img class="titlePic" src="Pictures/titlePic.JPG"  height="600"></center>
-        <h1 class="titlePicText">At Mission Bit making my first ever mobile app; Astro Balls.</h1>
-        <br><br><br>
-        <h1 class="comingSoon">More stuff coming soon!</h1>
-        <br><br><br>
-        <h1 class="thankyous">Thanks to the following people who made me love coding: John Hajel(AP CS teacher at my high school), Joseph Williams(Mission Bit), Zach Latta(HackEDU)</h1>
+    <div id="buttons">
+        <a href="https://github.com/MiLeung" target="_blank"> <img src="Pictures/ghB.png" class="buttons" alt="Github button"> </a> <br>
+        <a href="https://www.linkedin.com/in/michaeleleung" target="_blank"> <img src="Pictures/liB.png" class="buttons" alt="LinkedIn button"> </a> <br>
+        <a href="http://stackoverflow.com/users/4975090/michael-l" target="_blank"> <img src="Pictures/sofB.png" class="buttons" alt="stack overflow button"> </a> <br>
+        <a href="https://www.youtube.com/channel/UCalSvpcbt7UwDQ5kkLhPywQ" target="_blank"> <img src="Pictures/ytB.png" class="buttons" alt="youtube button"> </a> <br>
+        <a href="http://www.codewars.com/users/MiLeung" target="_blank"> <img src="Pictures/cwB.png" class="buttons" alt="codewars button"> </a>
+    </div>
+    <div id="stuff">
+        <div class="titlePic">
+            <img id="pic" src="Pictures/titlePic.JPG" alt="profile picture">
+            <h1 class="titlePicText">At Mission Bit making my first ever mobile app; Astro Balls.</h1>
+        </div>
+    </div>
+    <div class="intro">
+        <h2>Hello</h2>
+        <p>I'm Michael and I like to code!  I'm from San Francisco so I get a lot of exposure to that kind of stuff. 
+        The thing I like about coding is that you can make ANYTHING you want; coding allows me to be really creative!  
+        On this website, I will be posting projects that I'm currently working on or have already finished.</p> 
+        <br>
+        <h2 class="projects">Projects</h2>
+        <ul>
+            <li><a href="#astroBalls">Astro Balls</a></li>
+            <li><a href="#missionBitHackathon">2015 Mission Bit Hackathon project</a></li>
+            <li><a href="#apCSFinalProject">AP CS final project</a></li>
+        </ul>
+    </div>
+    </div>
+    
+    <div class="postings">
+        <div id="astroBalls">
+            <h3>Astro Balls</h3>
+            <img src="Pictures/astroBalls.png" alt="Astro Balls Screenshot">
+            <div id="content">
+            <p>
+                Before the Summer of 2015 started, I applied to Mission Bit's mobile app development course for the summer; a 6 week long, Monday-Friday, 9am-4pm, coding 
+                class where you learn how to use Android Studio and the LibGDX library.  I was very grateful and excited to have been accepted to the program.  Right when 
+                my Summer started, I began going to this class; for the first two weeks, it was mostly team building exercises, which I, or really just everybody else in the class, 
+                did not enjoy, BUT after that was when I really started learning how to make Android mobile apps.  I was put in a team of three; me, Milo, and David, where
+                 Milo and I did the coding and David did the art work.  Unfortunately for Milo, who had more code than me for the first week, he did not regularly test his
+                 code, so the end result of everything was 95% of the game's code is mine because Milo's code, which could have been conceptually correct, was not 
+                 syntactically correct. Poor Milo; I'm sure this would be a life lesson for him if he chooses to pursue coding later in life, but I digress.  
+            </p>
+            <p>
+                 We decided as a team
+                 to make a space themed bowling game (hence the name "Astro Balls") where each planet in our solar system would be a ball whose characteristics were determined
+                 by that planet's real life characteristics.  For example, Saturn's day length is 11 hours, so therefore the Saturn bowling ball would have a spin rate of roughly 
+                 46% faster than Earth's.  I say "roughly" because some planets (Venus and Mercury in particular) have day lengths in the thousands of hours and my team 
+                 did not want any planets with virtually no spin, so we made a minimum and maximum spin rate (5-10).  For the people who like to bowl and know how bowling
+                 scoring works, we are all aware of how confusing it was at first to grasp the concept of carrying scores back to spares/strikes to increase your score. That
+                 being said, it was even harder to put that in a coding algorithm and so, with only 3 days left to finish our projects, we as a team decided to just have a 
+                 dumbed down version of the actual bowling scoring system where only spares would add the proceeding score and NOT strikes (Milo's idea not mine; Milo was 
+                 responsible for the scoring algorithm) and the highest possible score, or "perfect game," would be 200.  I'm sure some people may prefer to see their score in 
+                 numbers while playing the game, but I had a better idea; since our game was to be played in portrait mode, it would be very awkward to cram the entire bowling
+                 scoreboard horizontally across the screen, so I came up with a point a to b system where you had a rocketship on the side of the screen which would approach it's 
+                target, the moon, everytime you knocked down some pins, so to reach the moon would mean you got a perfect game! 
+            </p> 
+            <p>
+                Because this game was made using Android Studio, it is unfortunately only available for Android phones (which breaks my heart because I'm an apple guy); 
+                Android Studio was what was taught to everybody in the class because it would be to troublesome to be teaching Android Studio and XCode at the same time, but
+                also because the phones that were donated to Mission Bit were Androids.  Another issue would be the fact that I hard coded everything relative to our
+                testing phone, the LG Volt, knowing that there's something called an orthographic camera in LibGDX's library which could create a virtual resolution on any
+                screen dimension, which would make hard coding acceptable (and easier on my brain).  In the end, I had a game which would work fine on the LG Volt, but not 
+                any other phone with a different screen resolution; the Nexus 5 for example would scale the visuals of the game, but not the x/y coordinates for the x/y
+                user inputs, so the buttons are not placed correctly on the screen.  Joe Williams, the instructor at Mission Bit's mobile app development course and I are 
+                currently working on this bug before we finally launch it on the Google Play Store.
+            </p>
+            <p>
+                I had a great time learning at Mission Bit and would reccomend them to anyone interested in coding.  I would like to personally thank Stevon Cook (CEO of
+                Mission Bit) and Joe Williams for making this Summer program a success!  I'd also like to give a shoutout to the video editor at KPIX CBS 5 for allowing me,
+                out of the 15+ students at the class, to be on TV for about 5 seconds.  Thank you. (CBS did a news clip on Mission bit which you can watch
+                <strong><a href="http://sanfrancisco.cbslocal.com/video/3278417-students-rising-above-stevon-cook-and-joe-williams-help-kids-learn-to-code/" target="_blank">here</a></strong>)
+            </p>
+            <br>
+            <p>
+                8-25-15 UPDATE: <br>
+                ASTRO BALLS IS OFFICIALLY ON THE GOOGLE PLAY STORE.  Yes, the time has finally come, Android users can now play Astro Balls in all of it's glitchy goodness.  What took so 
+                long for this app to finally be released was the screen scaling bug where the game would only work on phones with the same screen resolution as the LG Volt.  Hours of
+                essentially changing the hard coded numbers to ratios of camera size to the user's phone screen size have finally made Astro Balls playable on all Android phones.  
+                Another issue  I ran into while trying to upload the app was changing the package name in the apk which was "com.mygdx.game.android" at the time and there's already an app on the
+                Google play store with that package name.  To fix this issue was pretty frustrating because the refactoring process on Android Studio was very confusing; the first time I 
+                tried refactoring, it completely ruined the code because not every "com.mygdx.game.android" was refactored and there were even some lines of code that weren't supposed to
+                be refactored that got refactred anyways.  So in the end, I just decided to manually refactor everything (it was only a few hundred lines of code), and somehow, everything 
+                worked and the Google Play Store finally accepted my Android apk. <strong><a href="https://play.google.com/store/apps/details?id=com.mygdx.astroBalls.android" target="_blank">Here</a></strong> is a link to the game on the Google Play Store.  Unfortunately I found
+                out very recently that there was already a game called "Astro Ball" on the Google Play Store, so I was kind of dissapointed that my game could easily be confused with 
+                someone else's game.  This is only the beginning of my mobile game development career, so expect to see more games in the 
+                future! 
+            </p>
+                <br><br>  
+            </div>
+        </div>
+        
+        <div id="missionBitHackathon">
+            <h3>2015 Mission Bit Hackathon project</h3>
+            <img src="Pictures/mBHack.png" alt="Mission Bit Hackathon project screenschot">
+            <div class="content">
+            <p>
+                On May 17, I attended Mission Bit's Inaugural Hackathon.  I had never even heard of the term "hackathon" so this would be a completely new experience for me 
+                (but I assumed the "-athon" would imply an extended period of time of just coding).  Once the hackathon started, I really had no idea of what to make, but I 
+                knew for sure that I was going to use Khan Academy again for my IDE.  After about 10 minutes of thinking, I came to the conclusion that I would make a simple 
+                2d endless runner game.  In this game, you would play as a swimmer trying to swim away from a shark while avoiding being hit by boats at the surface while 
+                trying to replenish your oxygen level (This guy is having a really bad day).  After about 6 hours of coding (with breaks inbetween), I had a game that was 
+                fully functional with time, oxygen level, and everything.  If I could make a change to my work ethic while at this hackathon, I would've went in with a 
+                project already planned out and I would have definitely focused more on working on the game mechanics before moving on to the visuals as there are some 
+                aspects of the game that I did not have enough time to code for such as changing the angle of the swimmer depending if he swam up or down).  You can play my 
+                shark swimming game 
+                <strong><a href="https://www.khanacademy.org/computer-programming/hackathon-project/4764166336413696">here</a></strong> (My highest score is about 58 seconds.  It's 
+                one of those games that you play when you literally only have 2 minutes to spare, but you're a very time effective individual who is always occupied doing 
+                something, so you decide to take out your phone, and play something like Flappy Bird, lose pretty badly the first couple of times, but then find your groove, 
+                but by then, you've lost track of time, and end up being late to whatever you had planned).
+            </p>
+            </div>
+        </div>
+        
+        <div id="apCSFinalProject">
+            <h3 >AP CS final project</h3>
+            <img src="Pictures/apcsFinPro.png" alt="AP CS final project screenshot">
+            <div class="content">
+            <p>
+                In March 2015, as my senior year of high school was coming to a close, my final project for my AP Computer Science class was to build an app or a program of 
+                some sort.  I was paired with a very smart girl, Erika, who was always very helpful through out the school year, so I knew I could really push the boundaries 
+                of where I felt comfortable coding.  We decided to make a multiplayer game of "destroy the other guy's castle before he destroys yours," but eventually just 
+                settled on having a single player game where time was your score.  Although I was not responsible for the majority of the code, this game (and Erika) really 
+                helped me understand how a game works.  Our game was made using Khan Academy's JS + Processing.js IDE because of how easy it was to use (compared to making 
+                a canvas in an HTML file, downloading Processing.js, installing a text editor, etc.); point is, everything was just <em>there</em> on Khan Academy, so we just
+                went with that, manually copying and pasting our revised code into a shared Google Docs to pair program (neither of us had known about GitHub at the time).  
+                The end result was a fun little game which you can try out for yourself 
+                <strong><a href="https://www.khanacademy.org/computer-programming/cs-final-project-game/6384100420222976" target="_blank">here</a></strong> (My best score is
+                37 seconds.  It's a very hard game.)
+            </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="whiteSpace">
+        
+    </div>
+    
+    
+    <footer class="footer">
+        Thanks to the following people who helped me kickstart my coding career: John Hajel(AP CS teacher at my high school), Joseph Williams(Mission Bit), Zach Latta(HackEDU)
+    </footer>
+    
         
     </body>
 
