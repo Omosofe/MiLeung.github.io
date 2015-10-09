@@ -19,12 +19,13 @@ li a:hover {
 }
 
 h3 {
-    margin-left: 40px;
-    margin-top: 0px;
+    margin-left: 20%;
+    margin-right: auto;
 }
 
 p {
     margin: 0px 40px 0px 40px;
+    text-align: justify;
 }
 
 .title {
@@ -66,13 +67,9 @@ p {
     min-height: 100vh;
 }
 
-.postings {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .postings p {
-    padding: 0px 20px 0px 20px;
+    margin-left: 20%;
+    margin-right: 20%;
     width: auto;
     line-height: 1.6em;
     text-indent: 30px;
@@ -85,35 +82,28 @@ p {
 .postings img {
     float: right;
     height: 400px;
-    margin: 10px 25px 25px 25px;
+    margin: 10px 20% 25px 25px;
+    border: 1px solid lightgray; 
 }
 
+#topHR {
+    background-color: lightgray;
+    height: 2px;
+}
 
-.footer {
+.hr {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: lightgray;
+    height: 2px;
+}
+
+footer {
     font-size: 12px;
-    height: 20px;
-    margin-top: 90px;
-    margin-left: 20px;
-}
-
-/*Bootstrap Stuff*/
-
-
-/*project postings*/
-
-#TURN {
-    background-color: #CCFFCC;
-}
-
-#astroBalls {
-    background-color: #75FFFF;
-}
-
-#missionBitHackathon {
-    background-color: #FFAD33;
-}
-
-#apCSFinalProject {
-    background-color: #ADFF85;
+    bottom: 0;
+    /* Set the fixed height of the footer here */
+    height: 18px;
+    width: 100%;
+    background-color: #f5f5f5;
 }
 
