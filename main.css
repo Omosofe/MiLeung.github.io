@@ -68,11 +68,12 @@ p {
 }
 
 .postings p {
-    margin-left: 20%;
-    margin-right: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
     width: auto;
     line-height: 1.6em;
     text-indent: 30px;
+    text-align: justify;
 }
 
 .content {
