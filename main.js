@@ -1,3 +1,33 @@
+//adds a line after each posting
+$(".postings").children().append($("<div>",{class: "hr"}));
+
+//change project img css depending on screen size
+$(document).ready(function(){
+    if(window.innerWidth < 450){
+        $("#logo").css({height: 30});
+    }
+    if(window.innerWidth < 800){
+        $(".postings img").css({
+            height: window.innerHeight * 0.3,
+        });
+    }
+});
+
+//change logo size depending on window size
+$(window).resize(function(){
+    if(window.innerWidth < 450){
+        TweenLite.to($("#logo"), 0.2,{height: 30})
+    }
+    else{
+        TweenLite.to($("#logo"), 0.2,{height: 40})
+    }
+    if(window.innerWidth < 800){
+        $(".postings img").css({
+            height: window.innerHeight * 0.3,
+        });
+    }
+});
+
 //animate scrolling
 $(document).ready(function(){
 	$('a[href^="#"]').on('click',function (e) {
@@ -27,3 +57,35 @@ $(document).ready(function(){
         }
     );
 });
+
+//highlights project images on hover
+var smallIMG = true;
+$(".postings img").click(function(e){
+    if(smallIMG){
+        TweenLite.to(e.target, 0.2, {
+            scaleY: 1.6,
+            scaleX: 1.6});
+        smallIMG = false;
+    }
+    else{
+        TweenLite.to(e.target, 0.2, {
+            scaleY: 1,
+            scaleX: 1});
+        smallIMG = true;
+    }
+});
+
+//lowlights project images after set amount of scrolling
+var bar = 150;
+var scrollTop = 0;
+$(window).scroll(function(){
+    var diff = Math.abs($(window).scrollTop() - scrollTop);
+    if(diff > bar){
+        TweenLite.to($(".postings img"), 0.2, {
+            scaleY: 1,
+            scaleX: 1});
+        scrollTop = $(window).scrollTop();
+        smallIMG = true;
+    }
+});
+
