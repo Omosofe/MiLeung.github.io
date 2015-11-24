@@ -13,13 +13,30 @@ $(document).ready(function(){
     }
 });
 
+//does device orientation change innerwidth?
 //change logo size depending on window size
 $(window).resize(function(){
     if(window.innerWidth < 450){
         TweenLite.to($("#logo"), 0.2,{height: 30})
+        $(".hr").css({
+            marginLeft: "4%",
+            marginRight: "4%"
+        })
+        $(".postings p").css({
+            paddingLeft: "5%",
+            paddingRight: "5%"
+        })
     }
     else{
         TweenLite.to($("#logo"), 0.2,{height: 40})
+        $(".hr").css({
+            marginLeft: "12%",
+            marginRight: "12%"
+        })
+        $(".postings p").css({
+            paddingLeft: "15%",
+            paddingRight: "15%"
+        })
     }
     if(window.innerWidth < 800){
         $(".postings img").css({
